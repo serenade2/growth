@@ -44,11 +44,11 @@ public class ThirdPersonCamera2 : MonoBehaviour
             setCameraPositionFrontView();
         }
 
-        else if (Input.GetButton("Fire2"))	//Alt
-        {
-            // Change Jump Camera
-            setCameraPositionJumpView();
-        }
+        //else if (Input.GetButton("Fire2"))	//Alt
+        //{
+        //    // Change Jump Camera
+        //    setCameraPositionJumpView();
+        //}
 
         else
         {

@@ -14,7 +14,8 @@ public class FaceUpdate2 : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    void OnGUI()
+    // Uncomment the following line to display on the screen all the face animations that is  available on the game screen.
+    /*void OnGUI()
     {
         foreach (var animation in animations)
         {
@@ -23,7 +24,7 @@ public class FaceUpdate2 : MonoBehaviour
                 anim.CrossFade(animation.name, 0);
             }
         }
-    }
+    }*/
 
     float current = 0;
 
