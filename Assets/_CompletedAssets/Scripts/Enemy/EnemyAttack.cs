@@ -60,6 +60,8 @@ namespace CompleteProject
                 // TODO Edit the following line of code or create an other class when the battle scene are
                 // TODO ready and/or the NGUI UI is ready 
                 GetComponentInChildren<UIRoot>().GetComponentInChildren<UILabel>().alpha = 255f;
+
+                Application.LoadLevel(1);
                 // ... attack.
                 Attack ();
             }
