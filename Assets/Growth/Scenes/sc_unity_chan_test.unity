@@ -5712,13 +5712,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: .944827557, g: 1, b: 0, a: 0}
   mPivot: 4
-  mWidth: 442
+  mWidth: 438
   mHeight: 50
   mDepth: 0
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 8.84000015
+  aspectRatio: 8.76000023
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   mFont: {fileID: 0}
@@ -6506,7 +6506,7 @@ Transform:
   m_GameObject: {fileID: 1996253632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -.0292580128, z: -2.62058473}
-  m_LocalScale: {x: .00506329117, y: .00506329117, z: .00506329117}
+  m_LocalScale: {x: .00625000009, y: .00625000009, z: .00625000009}
   m_Children:
   - {fileID: 1694935052}
   - {fileID: 1768132301}
