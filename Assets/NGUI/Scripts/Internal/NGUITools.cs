@@ -1,6 +1,6 @@
 //----------------------------------------------
 //            NGUI: Next-Gen UI kit
-// Copyright © 2011-2014 Tasharen Entertainment
+// Copyright © 2011-2015 Tasharen Entertainment
 //----------------------------------------------
 
 using UnityEngine;
@@ -113,8 +113,10 @@ static public class NGUITools
 				AudioSource source = mListener.GetComponent<AudioSource>();
 #endif
 				if (source == null) source = mListener.gameObject.AddComponent<AudioSource>();
+#if !UNITY_FLASH
 				source.priority = 50;
 				source.pitch = pitch;
+#endif
 				source.PlayOneShot(clip, volume);
 				return source;
 			}

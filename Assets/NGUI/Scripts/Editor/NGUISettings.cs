@@ -1,6 +1,6 @@
 //----------------------------------------------
 //            NGUI: Next-Gen UI kit
-// Copyright © 2011-2014 Tasharen Entertainment
+// Copyright © 2011-2015 Tasharen Entertainment
 //----------------------------------------------
 
 using UnityEngine;
@@ -362,6 +362,12 @@ public class NGUISettings
 	{
 		get { return GetBool("NGUI Truecolor", true); }
 		set { SetBool("NGUI Truecolor", value); }
+	}
+
+	static public bool keepPadding
+	{
+		get { return GetBool("NGUI KeepPadding", false); }
+		set { SetBool("NGUI KeepPadding", value); }
 	}
 
 	static public bool forceSquareAtlas
