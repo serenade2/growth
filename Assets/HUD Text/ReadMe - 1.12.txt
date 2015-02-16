@@ -1,25 +1,20 @@
 --------------------------------------------------
               NGUI: HUD Text
- Copyright © 2012-2014 Tasharen Entertainment
-                Version 1.11
+ Copyright © 2012-2015 Tasharen Entertainment
+                Version 1.13
 http://www.tasharen.com/forum/index.php?topic=997.0
 --------------------------------------------------
 
 Thank you for buying NGUI HUD Text!
-
-This version of HUDText has been tested with NGUI 3.4.9
-If you have NGUI 2.7.0 or earlier, delete the Examples and Scripts folders,
-then import the contents of the hudtext_ngui270.unitypackage instead.
 
 ----------------------------------------------
 !! IMPORTANT NOTE !!
 ----------------------------------------------
 
 Upon importing this package into a brand-new project, you will get compile errors
-unless that project already has NGUI present! You'll need to import NGUI as well.
+unless that project already has NGUI present! You'll need to import NGUI first.
 If you don't have NGUI, but still want to use HUDText, then I am guessing you didn't
-read the package's description! But... you can still use HUDText. Get in touch with me
-via support@tasharen.com and I will hook you up.
+read the package's description!
 
 ----------------------------------------------
 

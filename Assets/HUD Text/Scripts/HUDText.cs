@@ -115,6 +115,9 @@ public class HUDText : MonoBehaviour
 	List<Entry> mUnused = new List<Entry>();
 
 	int counter = 0;
+	Keyframe[] mOffsets;
+	Keyframe[] mAlphas;
+	Keyframe[] mScales;
 
 	/// <summary>
 	/// Whether some HUD text is visible.
@@ -201,6 +204,15 @@ public class HUDText : MonoBehaviour
 		mList.Remove(ent);
 		mUnused.Add(ent);
 		NGUITools.SetActive(ent.label.gameObject, false);
+	}
+
+	/// <summary>
+	/// Add a new scrolling text entry.
+	/// </summary>
+
+	public void AddLocalized (string text, Color c, float stayDuration)
+	{
+		Add(Localization.Get(text), c, stayDuration);
 	}
 
 	/// <summary>
@@ -357,13 +369,16 @@ public class HUDText : MonoBehaviour
 #endif
 		float time = RealTime.time;
 
-		Keyframe[] offsets = offsetCurve.keys;
-		Keyframe[] alphas = alphaCurve.keys;
-		Keyframe[] scales = scaleCurve.keys;
+		if (mOffsets == null)
+		{
+			mOffsets = offsetCurve.keys;
+			mAlphas = alphaCurve.keys;
+			mScales = scaleCurve.keys;
+		}
 
-		float offsetEnd = offsets[offsets.Length - 1].time;
-		float alphaEnd = alphas[alphas.Length - 1].time;
-		float scalesEnd = scales[scales.Length - 1].time;
+		float offsetEnd = mOffsets[mOffsets.Length - 1].time;
+		float alphaEnd = mAlphas[mAlphas.Length - 1].time;
+		float scalesEnd = mScales[mScales.Length - 1].time;
 		float totalEnd = Mathf.Max(scalesEnd, Mathf.Max(offsetEnd, alphaEnd));
 
 		// Adjust alpha and delete old entries

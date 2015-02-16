@@ -9,9 +9,16 @@ using UnityEngine;
 /// Attaching this script to an object will make it visibly follow another object, even if the two are using different cameras to draw them.
 /// </summary>
 
-[AddComponentMenu("NGUI/Examples/Follow Target")]
 public class UIFollowTarget : MonoBehaviour
 {
+	public delegate void OnVisibilityChange (bool isVisible);
+
+	/// <summary>
+	/// Callback triggered every time the object becomes visible or invisible.
+	/// </summary>
+
+	public OnVisibilityChange onChange;
+
 	/// <summary>
 	/// 3D target that this object will be positioned above.
 	/// </summary>
@@ -36,8 +43,20 @@ public class UIFollowTarget : MonoBehaviour
 
 	public bool disableIfInvisible = true;
 
+	/// <summary>
+	/// Destroy the game object when target disappears.
+	/// </summary>
+
+	public bool destroyWithTarget = true;
+
 	Transform mTrans;
-	bool mIsVisible = false;
+	int mIsVisible = -1;
+
+	/// <summary>
+	/// Whether the target is currently visible or not.
+	/// </summary>
+
+	public bool isVisible { get { return mIsVisible == 1; } }
 
 	/// <summary>
 	/// Cache the transform;
@@ -51,30 +70,16 @@ public class UIFollowTarget : MonoBehaviour
 
 	void Start()
 	{
-		if (target != null)
+		if (target)
 		{
 			if (gameCamera == null) gameCamera = NGUITools.FindCameraForLayer(target.gameObject.layer);
 			if (uiCamera == null) uiCamera = NGUITools.FindCameraForLayer(gameObject.layer);
-			SetVisible(false);
+			Update();
 		}
 		else
 		{
-			Debug.LogError("Expected to have 'target' set to a valid transform", this);
-			enabled = false;
-		}
-	}
-
-	/// <summary>
-	/// Enable or disable child objects.
-	/// </summary>
-
-	void SetVisible (bool val)
-	{
-		mIsVisible = val;
-
-		for (int i = 0, imax = mTrans.childCount; i < imax; ++i)
-		{
-			NGUITools.SetActive(mTrans.GetChild(i).gameObject, val);
+			if (destroyWithTarget) Destroy(gameObject);
+			else enabled = false;
 		}
 	}
 
@@ -84,30 +89,40 @@ public class UIFollowTarget : MonoBehaviour
 
 	void Update ()
 	{
-		Vector3 pos = gameCamera.WorldToViewportPoint(target.position);
-
-		// Determine the visibility and the target alpha
-		bool isVisible = (gameCamera.isOrthoGraphic || pos.z > 0f) && (!disableIfInvisible || (pos.x > 0f && pos.x < 1f && pos.y > 0f && pos.y < 1f));
-
-		// Update the visibility flag
-		if (mIsVisible != isVisible) SetVisible(isVisible);
-
-		// If visible, update the position
-		if (isVisible)
+		if (target && uiCamera != null)
 		{
-			transform.position = uiCamera.ViewportToWorldPoint(pos);
-			pos = mTrans.localPosition;
-			pos.x = Mathf.FloorToInt(pos.x);
-			pos.y = Mathf.FloorToInt(pos.y);
-			pos.z = 0f;
-			mTrans.localPosition = pos;
+			Vector3 pos = gameCamera.WorldToViewportPoint(target.position);
+
+			// Determine the visibility and the target alpha
+			int isVisible = (gameCamera.isOrthoGraphic || pos.z > 0f) && (pos.x > 0f && pos.x < 1f && pos.y > 0f && pos.y < 1f) ? 1 : 0;
+			bool vis = (isVisible == 1);
+
+			// If visible, update the position
+			if (vis)
+			{
+				pos = uiCamera.ViewportToWorldPoint(pos);
+				pos = mTrans.parent.InverseTransformPoint(pos);
+				//pos.x = Mathf.RoundToInt(pos.x);
+				//pos.y = Mathf.RoundToInt(pos.y);
+				pos.z = 0f;
+				mTrans.localPosition = pos;
+			}
+
+			// Update the visibility flag
+			if (mIsVisible != isVisible)
+			{
+				mIsVisible = isVisible;
+
+				if (disableIfInvisible)
+				{
+					for (int i = 0, imax = mTrans.childCount; i < imax; ++i)
+						NGUITools.SetActive(mTrans.GetChild(i).gameObject, vis);
+				}
+
+				// Inform the listener
+				if (onChange != null) onChange(vis);
+			}
 		}
-		OnUpdate(isVisible);
+		else Destroy(gameObject);
 	}
-
-	/// <summary>
-	/// Custom update function.
-	/// </summary>
-
-	protected virtual void OnUpdate (bool isVisible) { }
 }
