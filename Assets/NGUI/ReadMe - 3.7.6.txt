@@ -1,7 +1,11 @@
 ----------------------------------------------
             NGUI: Next-Gen UI kit
  Copyright © 2011-2015 Tasharen Entertainment
+<<<<<<< HEAD
             Version 3.8.0
+=======
+            Version 3.7.9
+>>>>>>> ec449cecbbf635e27e028dffdb0e702be9abd506
     http://www.tasharen.com/?page_id=197
             support@tasharen.com
 ----------------------------------------------
@@ -55,6 +59,7 @@ and it will not be included in the build of your game. It's only used in the edi
  Version History
 -----------------
 
+<<<<<<< HEAD
 3.8.0
 - NEW: Added a way to add TouchScript support to NGUI: http://www.tasharen.com/forum/index.php?topic=12411.0
 - NEW: Setting a Unity sprite on a UI2DSprite will now automatically set its border values.
@@ -62,6 +67,8 @@ and it will not be included in the build of your game. It's only used in the edi
 - FIX: Popup lists should now work better with multi-touch events.
 - FIX: Variety of fixes for obscure issues that most would have never encountered.
 
+=======
+>>>>>>> ec449cecbbf635e27e028dffdb0e702be9abd506
 3.7.9
 - NEW: Localization system can now automatically merge localization data coming from multiple sources as well as partial localizations.
 - NEW: Command-click = right click is now an option on the UICamera instead of always being on.
