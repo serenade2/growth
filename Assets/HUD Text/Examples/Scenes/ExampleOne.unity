@@ -751,10 +751,8 @@ MonoBehaviour:
   cullWhileDragging: 0
   alwaysOnScreen: 0
   anchorOffset: 0
-  softBorderPadding: 1
   renderQueue: 0
   startingRenderQueue: 3000
-  mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 300, w: 200}
@@ -3247,15 +3245,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chatMessages:
-  - '"Pretend I said sumtin'' clevar!"'
-  - '"Wut?"'
-  - '"Jus'' do it!"'
-  - '"Me confused."'
-  - '"Ach! Why you so dumb!"'
+  - 2250726574656e64204920736169642073756d74696e2720636c657661722122
+  - 225775743f22
+  - 224a75732720646f2069742122
+  - 224d6520636f6e66757365642e22
+  - 22416368212057687920796f7520736f2064756d622122
   - 
   - 
-  - '"Nevar gonna gib joo up...\nNevar gonna let joo down..."'
-  - '"...I hate you."'
+  - 224e6576617220676f6e6e6120676962206a6f6f2075702e2e2e5c6e4e6576617220676f6e6e61206c6574206a6f6f20646f776e2e2e2e22
+  - 222e2e2e49206861746520796f752e22
   cameraLookAt: {fileID: 1940761074}
 --- !u!1001 &761635477
 Prefab:
@@ -3632,10 +3630,8 @@ MonoBehaviour:
   cullWhileDragging: 0
   alwaysOnScreen: 0
   anchorOffset: 0
-  softBorderPadding: 1
   renderQueue: 0
   startingRenderQueue: 3000
-  mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 300, w: 200}
@@ -3755,7 +3751,11 @@ MonoBehaviour:
     relative: 1
     absolute: 12
   updateAnchors: 1
-  mColor: {r: .215686277, g: .215686277, b: .215686277, a: 1}
+  mColor:
+    r: .215686277
+    g: .215686277
+    b: .215686277
+    a: 1
   mPivot: 7
   mWidth: 719
   mHeight: 84
@@ -3775,7 +3775,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: def75ab044159bd4194340c4c00c89fa, type: 2}
-  mSpriteName: Button
+  mSpriteName: 427574746f6e
   mFillCenter: 1
 --- !u!1 &966926204
 GameObject:
@@ -3959,12 +3959,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scalingStyle: 0
-  manualWidth: 1280
   manualHeight: 683
   minimumHeight: 320
   maximumHeight: 1536
-  fitWidth: 0
-  fitHeight: 1
   adjustByDPI: 0
   shrinkPortraitUI: 0
 --- !u!1 &1127135768
@@ -5147,7 +5144,6 @@ MonoBehaviour:
   method: 3
   style: 2
   animationCurve:
-    serializedVersion: 2
     m_Curve:
     - time: 0
       value: 0
@@ -5169,8 +5165,16 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: {r: .865671635, g: .605906904, b: .122744486, a: 1}
-  to: {r: .99253732, g: .782033622, b: .0518489815, a: 1}
+  from:
+    r: .865671635
+    g: .605906904
+    b: .122744486
+    a: 1
+  to:
+    r: .99253732
+    g: .782033622
+    b: .0518489815
+    a: 1
 --- !u!1 &1602010163
 GameObject:
   m_ObjectHideFlags: 0
@@ -5604,10 +5608,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventType: 1
-  eventsGoToColliders: 0
-  eventReceiverMask:
-    serializedVersion: 2
-    m_Bits: 1
+  eventReceiverMask: {}
   debug: 0
   useMouse: 1
   useTouch: 1
@@ -5621,10 +5622,9 @@ MonoBehaviour:
   touchDragThreshold: 40
   touchClickThreshold: 40
   rangeDistance: -1
-  scrollAxisName: Mouse ScrollWheel
-  verticalAxisName: Vertical
-  horizontalAxisName: Horizontal
-  commandClick: 1
+  scrollAxisName: 4d6f757365205363726f6c6c576865656c
+  verticalAxisName: 566572746963616c
+  horizontalAxisName: 486f72697a6f6e74616c
   submitKey0: 13
   submitKey1: 330
   cancelKey0: 27
@@ -5840,10 +5840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventType: 1
-  eventsGoToColliders: 0
-  eventReceiverMask:
-    serializedVersion: 2
-    m_Bits: 4294966783
+  eventReceiverMask: {}
   debug: 0
   useMouse: 1
   useTouch: 1
@@ -5857,10 +5854,9 @@ MonoBehaviour:
   touchDragThreshold: 40
   touchClickThreshold: 40
   rangeDistance: -1
-  scrollAxisName: Mouse ScrollWheel
-  verticalAxisName: Vertical
-  horizontalAxisName: Horizontal
-  commandClick: 1
+  scrollAxisName: 4d6f757365205363726f6c6c576865656c
+  verticalAxisName: 566572746963616c
+  horizontalAxisName: 486f72697a6f6e74616c
   submitKey0: 13
   submitKey1: 330
   cancelKey0: 27
@@ -6149,7 +6145,11 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mColor:
+    r: 1
+    g: 1
+    b: 1
+    a: 1
   mPivot: 6
   mWidth: 695
   mHeight: 60
@@ -6161,28 +6161,35 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 0}
   mFont: {fileID: 11400000, guid: 496850e0cc8381f4483dd1eabe2e96b5, type: 2}
-  mText: One of the uses for the HUD Text can be non-combat related. You could use
-    it to have different characters "talk" to each other by displaying lines of text
-    above their heads.
+  mText: 4f6e65206f6620746865207573657320666f72207468652048554420546578742063616e206265206e6f6e2d636f6d6261742072656c617465642e20596f7520636f756c642075736520697420746f206861766520646966666572656e742063686172616374657273202274616c6b2220746f2065616368206f7468657220627920646973706c6179696e67206c696e6573206f6620746578742061626f76652074686569722068656164732e
   mFontSize: 20
   mFontStyle: 0
   mAlignment: 0
   mEncoding: 1
   mMaxLineCount: 0
   mEffectStyle: 0
-  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
+  mEffectColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 1
   mSymbols: 1
   mEffectDistance: {x: 1, y: 1}
   mOverflow: 3
   mMaterial: {fileID: 0}
   mApplyGradient: 0
-  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
-  mGradientBottom: {r: .5, g: .5, b: .5, a: 1}
+  mGradientTop:
+    r: 1
+    g: 1
+    b: 1
+    a: 1
+  mGradientBottom:
+    r: .5
+    g: .5
+    b: .5
+    a: 1
   mSpacingX: 0
   mSpacingY: 0
-  mUseFloatSpacing: 0
-  mFloatSpacingX: 0
-  mFloatSpacingY: 0
   mShrinkToFit: 0
   mMaxLineWidth: 0
   mMaxLineHeight: 0

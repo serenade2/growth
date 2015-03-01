@@ -3,22 +3,22 @@ guid: 46543f647dffd39419655e753e141dea
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: Beaver
-    100002: Ground - Ignore Me
-    100004: Sky01
+    100000: Sky01
+    100002: Beaver
+    100004: Tents
     100006: //RootNode
-    100008: Tents
-    400000: Beaver
-    400002: Ground - Ignore Me
-    400004: Sky01
+    100008: Ground - Ignore Me
+    400000: Sky01
+    400002: Beaver
+    400004: Tents
     400006: //RootNode
-    400008: Tents
+    400008: Ground - Ignore Me
     2300000: Beaver
-    2300002: Ground - Ignore Me
-    2300004: Tents
+    2300002: Tents
+    2300004: Ground - Ignore Me
     3300000: Beaver
-    3300002: Ground - Ignore Me
-    3300004: Tents
+    3300002: Tents
+    3300004: Ground - Ignore Me
     4300000: Tents
     4300002: Ground - Ignore Me
     4300004: Beaver

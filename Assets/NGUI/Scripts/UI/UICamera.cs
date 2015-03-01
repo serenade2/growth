@@ -507,10 +507,6 @@ public class UICamera : MonoBehaviour
 		get
 		{
 			if (mCurrentSelection) return mCurrentSelection;
-<<<<<<< HEAD
-=======
-			mCurrentSelection = null;
->>>>>>> ec449cecbbf635e27e028dffdb0e702be9abd506
 			return null;
 		}
 		set
@@ -566,30 +562,10 @@ public class UICamera : MonoBehaviour
 
 	static public bool IsPressed (GameObject go)
 	{
-<<<<<<< HEAD
 		for (int i = 0; i < 3; ++i) if (mMouse[i].pressed == go) return true;
 		foreach (KeyValuePair<int, MouseOrTouch> touch in mTouches) if (touch.Value.pressed == go) return true;
 		if (controller.pressed == go) return true;
 		return false;
-=======
-        yield return new WaitForEndOfFrame();
-		if (onSelect != null) onSelect(mCurrentSelection, false);
-		Notify(mCurrentSelection, "OnSelect", false);
-		mCurrentSelection = mNextSelection;
-		mNextSelection = null;
-
-		if (mCurrentSelection != null)
-		{
-			current = this;
-			currentCamera = mCam;
-			UICamera.currentScheme = mNextScheme;
-			inputHasFocus = (mCurrentSelection.GetComponent<UIInput>() != null);
-			if (onSelect != null) onSelect(mCurrentSelection, true);
-			Notify(mCurrentSelection, "OnSelect", true);
-			current = null;
-		}
-		else inputHasFocus = false;
->>>>>>> ec449cecbbf635e27e028dffdb0e702be9abd506
 	}
 
 	/// <summary>
@@ -1845,10 +1821,7 @@ public class UICamera : MonoBehaviour
 	void ProcessRelease (bool isMouse, float drag)
 	{
 		// Send out the unpress message
-<<<<<<< HEAD
 		if (currentTouch == null) return;
-=======
->>>>>>> ec449cecbbf635e27e028dffdb0e702be9abd506
 		currentTouch.pressStarted = false;
 		if (mTooltip != null) ShowTooltip(false);
 
@@ -1882,7 +1855,6 @@ public class UICamera : MonoBehaviour
 				currentTouch.clickNotification != ClickNotification.None &&
 				currentTouch.totalDelta.sqrMagnitude < drag))
 			{
-<<<<<<< HEAD
 				// If the touch should consider clicks, send out an OnClick notification
 				if (currentTouch.clickNotification != ClickNotification.None && currentTouch.pressed == currentTouch.current)
 				{
@@ -1891,29 +1863,6 @@ public class UICamera : MonoBehaviour
 					if (onClick != null) onClick(currentTouch.pressed);
 					Notify(currentTouch.pressed, "OnClick", null);
 
-=======
-				if (currentTouch.pressed != mCurrentSelection)
-				{
-					mNextSelection = null;
-					mCurrentSelection = currentTouch.pressed;
-					if (onSelect != null) onSelect(currentTouch.pressed, true);
-					Notify(currentTouch.pressed, "OnSelect", true);
-				}
-				else
-				{
-					mNextSelection = null;
-					mCurrentSelection = currentTouch.pressed;
-				}
-
-				// If the touch should consider clicks, send out an OnClick notification
-				if (currentTouch.clickNotification != ClickNotification.None && currentTouch.pressed == currentTouch.current)
-				{
-					float time = RealTime.time;
-
-					if (onClick != null) onClick(currentTouch.pressed);
-					Notify(currentTouch.pressed, "OnClick", null);
-
->>>>>>> ec449cecbbf635e27e028dffdb0e702be9abd506
 					if (currentTouch.clickTime + 0.35f > time)
 					{
 						if (onDoubleClick != null) onDoubleClick(currentTouch.pressed);
@@ -1954,11 +1903,7 @@ public class UICamera : MonoBehaviour
 			if (released) ProcessRelease(isMouse, drag);
 			ProcessPress(pressed, click, drag);
 		}
-<<<<<<< HEAD
 		else if (isMouse || pressed || released)
-=======
-		else
->>>>>>> ec449cecbbf635e27e028dffdb0e702be9abd506
 		{
 			ProcessPress(pressed, click, drag);
 			if (released) ProcessRelease(isMouse, drag);
