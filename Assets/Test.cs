@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Test : MonoBehaviour 
+public class Test: MonoBehaviour 
 {
     public void MakeItRed()
     {
@@ -16,5 +16,4 @@ public class Test : MonoBehaviour
     {
         GetComponent<UIWidget>().color = Color.green;
     }
-    
 }

@@ -8,4 +8,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Growth/Scenes/sc_forest_field.unity
   - enabled: 1
-    path: Assets/Growth/Scenes/sc_engaging_mode.unity
+    path: Assets/Growth/Scenes/sc_engaging_mode_v_1_2.unity
