@@ -41,17 +41,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 8c86f6a9ffa67ca41bb740c5dea38038, type: 2}
   mUVRect:
+    serializedVersion: 2
     x: 0
     y: 0
     width: 1
     height: 1
   mFont:
-    mGlyphs: []
     mSize: 48
     mBase: 36
     mWidth: 384
     mHeight: 384
-    mSpriteName: 4c617267655f30
+    mSpriteName: Large_0
     mSaved:
     - index: 32
       x: 379
@@ -1563,11 +1563,12 @@ MonoBehaviour:
       advance: 22
       channel: 15
       kerning: 
-    mSymbols: []
-  mSpacingX: 0
-  mSpacingY: 0
   mAtlas: {fileID: 0}
   mReplacement: {fileID: 0}
+  mSymbols: []
+  mDynamicFont: {fileID: 0}
+  mDynamicFontSize: 16
+  mDynamicFontStyle: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

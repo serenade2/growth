@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: e7f4e46579c1ecd4f9522e93dc9fe505, type: 2}
   mSprites:
-  - name: 576f6f64656e204261636b67726f756e64
+  - name: Wooden Background
     x: 0
     y: 257
     width: 255
@@ -60,7 +60,7 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: 476c6f77202d20496e6e6572
+  - name: Glow - Inner
     x: 320
     y: 272
     width: 29
@@ -73,7 +73,7 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: 476c6f77202d204f75746572
+  - name: Glow - Outer
     x: 127
     y: 13
     width: 60
@@ -86,7 +86,7 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: 4e475549
+  - name: NGUI
     x: 0
     y: 180
     width: 255
@@ -99,7 +99,7 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: 486967686c69676874202d205468696e
+  - name: Highlight - Thin
     x: 379
     y: 279
     width: 22
@@ -112,7 +112,7 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: 486967686c69676874202d20536861646f776564
+  - name: Highlight - Shadowed
     x: 350
     y: 273
     width: 28
@@ -125,7 +125,7 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: 427574746f6e
+  - name: Button
     x: 379
     y: 261
     width: 17
@@ -138,7 +138,7 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: 5363726577
+  - name: Screw
     x: 289
     y: 272
     width: 30
@@ -151,7 +151,7 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 1
     paddingBottom: 1
-  - name: 4172696d6f3230
+  - name: Arimo20
     x: 256
     y: 396
     width: 255
@@ -164,7 +164,7 @@ MonoBehaviour:
     paddingRight: 1
     paddingTop: 0
     paddingBottom: 140
-  - name: 526f77204f75746c696e65
+  - name: Row Outline
     x: 256
     y: 264
     width: 5
@@ -177,7 +177,7 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: 4172696d6f3134
+  - name: Arimo14
     x: 0
     y: 53
     width: 126
@@ -190,7 +190,7 @@ MonoBehaviour:
     paddingRight: 1
     paddingTop: 0
     paddingBottom: 1
-  - name: 4172696d6f3138
+  - name: Arimo18
     x: 256
     y: 302
     width: 254
@@ -203,7 +203,7 @@ MonoBehaviour:
     paddingRight: 1
     paddingTop: 0
     paddingBottom: 34
-  - name: 466c61672d4652
+  - name: Flag-FR
     x: 127
     y: 127
     width: 80
@@ -216,7 +216,7 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 19
     paddingBottom: 9
-  - name: 466c61672d5553
+  - name: Flag-US
     x: 127
     y: 74
     width: 80
@@ -229,7 +229,7 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 19
     paddingBottom: 9
-  - name: 436865636b6d61726b
+  - name: Checkmark
     x: 256
     y: 270
     width: 32

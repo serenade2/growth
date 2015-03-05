@@ -305,21 +305,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   method: 3
   style: 2
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
   duration: 1
   steeperCurves: 0
   tweenGroup: 0
+  onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from:
-    r: .865671635
-    g: .605906904
-    b: .122744486
-    a: 1
-  to:
-    r: .99253732
-    g: .782033622
-    b: .0518489815
-    a: 1
+  from: {r: .865671635, g: .605906904, b: .122744486, a: 1}
+  to: {r: .99253732, g: .782033622, b: .0518489815, a: 1}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1

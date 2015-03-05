@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: e7f4e46579c1ecd4f9522e93dc9fe505, type: 2}
   mUVRect:
+    serializedVersion: 2
     x: .5
     y: -.2734375
     width: .5
@@ -56,7 +57,7 @@ MonoBehaviour:
     mBase: 16
     mWidth: 256
     mHeight: 256
-    mSpriteName: 4172696d6f3230
+    mSpriteName: Arimo20
     mSaved:
     - index: 0
       x: 0

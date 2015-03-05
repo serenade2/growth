@@ -73,6 +73,7 @@ NavMeshSettings:
     minRegionArea: 2
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
+    tileSizeHint: 0
   m_NavMesh: {fileID: 0}
 --- !u!1 &2693805
 GameObject:
@@ -452,6 +453,7 @@ MonoBehaviour:
   method: 3
   style: 2
   animationCurve:
+    serializedVersion: 2
     m_Curve:
     - time: 0
       value: 0
@@ -473,16 +475,8 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from:
-    r: .865671635
-    g: .605906904
-    b: .122744486
-    a: 1
-  to:
-    r: .99253732
-    g: .782033622
-    b: .0518489815
-    a: 1
+  from: {r: .865671635, g: .605906904, b: .122744486, a: 1}
+  to: {r: .99253732, g: .782033622, b: .0518489815, a: 1}
 --- !u!1 &266241541
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,7 +929,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventType: 1
-  eventReceiverMask: {}
+  eventsGoToColliders: 0
+  eventReceiverMask:
+    serializedVersion: 2
+    m_Bits: 1
   debug: 0
   useMouse: 1
   useTouch: 1
@@ -949,9 +946,10 @@ MonoBehaviour:
   touchDragThreshold: 40
   touchClickThreshold: 40
   rangeDistance: -1
-  scrollAxisName: 4d6f757365205363726f6c6c576865656c
-  verticalAxisName: 566572746963616c
-  horizontalAxisName: 486f72697a6f6e74616c
+  scrollAxisName: Mouse ScrollWheel
+  verticalAxisName: Vertical
+  horizontalAxisName: Horizontal
+  commandClick: 1
   submitKey0: 13
   submitKey1: 330
   cancelKey0: 27
@@ -1343,23 +1341,12 @@ MonoBehaviour:
   fontSize: 48
   fontStyle: 0
   applyGradient: 1
-  gradientTop:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
-  gradienBottom:
-    r: .699999988
-    g: .699999988
-    b: .699999988
-    a: 1
+  gradientTop: {r: 1, g: 1, b: 1, a: 1}
+  gradienBottom: {r: .699999988, g: .699999988, b: .699999988, a: 1}
   effect: 1
-  effectColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
+  effectColor: {r: 0, g: 0, b: 0, a: 1}
   offsetCurve:
+    serializedVersion: 2
     m_Curve:
     - time: 0
       value: 0
@@ -1374,6 +1361,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
   alphaCurve:
+    serializedVersion: 2
     m_Curve:
     - time: 1
       value: 1
@@ -1388,6 +1376,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
   scaleCurve:
+    serializedVersion: 2
     m_Curve:
     - time: 0
       value: 0
@@ -1476,9 +1465,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scalingStyle: 0
+  manualWidth: 1280
   manualHeight: 683
   minimumHeight: 320
   maximumHeight: 1536
+  fitWidth: 0
+  fitHeight: 1
   adjustByDPI: 0
   shrinkPortraitUI: 0
 --- !u!1 &1078545452
@@ -2022,8 +2014,10 @@ MonoBehaviour:
   cullWhileDragging: 0
   alwaysOnScreen: 0
   anchorOffset: 0
+  softBorderPadding: 1
   renderQueue: 0
   startingRenderQueue: 3000
+  mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 300, w: 200}
@@ -2088,11 +2082,7 @@ MonoBehaviour:
     relative: 1
     absolute: 12
   updateAnchors: 1
-  mColor:
-    r: .215686277
-    g: .215686277
-    b: .215686277
-    a: 1
+  mColor: {r: .215686277, g: .215686277, b: .215686277, a: 1}
   mPivot: 7
   mWidth: 719
   mHeight: 104
@@ -2112,7 +2102,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: def75ab044159bd4194340c4c00c89fa, type: 2}
-  mSpriteName: 427574746f6e
+  mSpriteName: Button
   mFillCenter: 1
 --- !u!1 &1523057974
 GameObject:
@@ -2380,11 +2370,7 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 6
   mWidth: 695
   mHeight: 80
@@ -2396,35 +2382,29 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 0}
   mFont: {fileID: 11400000, guid: 496850e0cc8381f4483dd1eabe2e96b5, type: 2}
-  mText: 546865207472756520706f776572206f66204855442054657874206c69657320696e20746865206162696c69747920746f20646973706c6179206e756d657269632076616c7565732c206175746f6d61746963616c6c7920616464696e67207468656d20757020696e746f2067726f757073206f6620706f73697469766520616e64206e65676174697665732e2047697665206974206120747279202d2d20686f76657220796f7572206d6f757365206f76657220746865206f726320616e64206c6566742f726967687420636c69636b206f6e2068696d2072617069646c792e205468652067726f757073206c61737420666f7220757020746f2061207365636f6e642c206d616b696e67206974206561737920746f20736565207468652061637475616c204450532e
+  mText: The true power of HUD Text lies in the ability to display numeric values,
+    automatically adding them up into groups of positive and negatives. Give it a
+    try -- hover your mouse over the orc and left/right click on him rapidly. The
+    groups last for up to a second, making it easy to see the actual DPS.
   mFontSize: 20
   mFontStyle: 0
   mAlignment: 0
   mEncoding: 1
   mMaxLineCount: 0
   mEffectStyle: 0
-  mEffectColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
+  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
   mSymbols: 1
   mEffectDistance: {x: 1, y: 1}
   mOverflow: 3
   mMaterial: {fileID: 0}
   mApplyGradient: 0
-  mGradientTop:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
-  mGradientBottom:
-    r: .5
-    g: .5
-    b: .5
-    a: 1
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: .5, g: .5, b: .5, a: 1}
   mSpacingX: 0
   mSpacingY: 0
+  mUseFloatSpacing: 0
+  mFloatSpacingX: 0
+  mFloatSpacingY: 0
   mShrinkToFit: 0
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -2829,7 +2809,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventType: 0
-  eventReceiverMask: {}
+  eventsGoToColliders: 0
+  eventReceiverMask:
+    serializedVersion: 2
+    m_Bits: 4294966527
   debug: 0
   useMouse: 1
   useTouch: 1
@@ -2843,9 +2826,10 @@ MonoBehaviour:
   touchDragThreshold: 40
   touchClickThreshold: 40
   rangeDistance: -1
-  scrollAxisName: 4d6f757365205363726f6c6c576865656c
-  verticalAxisName: 566572746963616c
-  horizontalAxisName: 486f72697a6f6e74616c
+  scrollAxisName: Mouse ScrollWheel
+  verticalAxisName: Vertical
+  horizontalAxisName: Horizontal
+  commandClick: 1
   submitKey0: 13
   submitKey1: 330
   cancelKey0: 27
@@ -3045,8 +3029,10 @@ MonoBehaviour:
   cullWhileDragging: 0
   alwaysOnScreen: 0
   anchorOffset: 0
+  softBorderPadding: 1
   renderQueue: 0
   startingRenderQueue: 3000
+  mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 300, w: 200}
