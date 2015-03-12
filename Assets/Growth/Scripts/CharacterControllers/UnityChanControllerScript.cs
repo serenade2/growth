@@ -29,7 +29,10 @@ public class UnityChanControllerScript : MonoBehaviour
 	// 旋回速度
 	public float rotateSpeed = 2.0f;
 	// ジャンプ威力
-	public float jumpPower = 3.0f; 
+	public float jumpPower = 3.0f;
+    
+    AudioSource footStepAudioSource;
+    public AudioClip   footStepAudioClip;
 	// キャラクターコントローラ（カプセルコライダ）の参照
 	private CapsuleCollider col;
 	private Rigidbody rb;
@@ -50,6 +53,14 @@ public class UnityChanControllerScript : MonoBehaviour
 	static int jumpState = Animator.StringToHash("Base Layer.Jump");
 	static int restState = Animator.StringToHash("Base Layer.Rest");
 
+
+    void Awake()
+    {
+        //footStepAudioClip = GetComponent<AudioClip>();
+        //footStepAudioSource.clip = footStepAudioClip;
+        //footStepAudioSource = // TODO
+    }
+
 // 初期化
 	void Start ()
 	{
@@ -63,12 +74,20 @@ public class UnityChanControllerScript : MonoBehaviour
 		// CapsuleColliderコンポーネントのHeight、Centerの初期値を保存する
 		orgColHight = col.height;
 		orgVectColCenter = col.center;
-}
+
+        
+
+	}
+
 	
 	
 // 以下、メイン処理.リジッドボディと絡めるので、FixedUpdate内で処理を行う.
 	void FixedUpdate ()
 	{
+        // play the foot step sound every time the walking animation occurs.
+        
+        //footStepAudioSource.Play();
+
 		float h = Input.GetAxis("Horizontal");				// 入力デバイスの水平軸をhで定義
 		float v = Input.GetAxis("Vertical");				// 入力デバイスの垂直軸をvで定義
 		anim.SetFloat("Speed", v);							// Animator側で設定している"Speed"パラメタにvを渡す
@@ -115,10 +134,13 @@ public class UnityChanControllerScript : MonoBehaviour
 		// Locomotion中
 		// 現在のベースレイヤーがlocoStateの時
 		if (currentBaseState.nameHash == locoState){
+           
 			//カーブでコライダ調整をしている時は、念のためにリセットする
 			if(useCurves){
 				resetCollider();
 			}
+
+           
 		}
 		// JUMP中の処理
 		// 現在のベースレイヤーがjumpStateの時
