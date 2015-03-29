@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class EngageMenuInfo : MonoBehaviour 
 {
@@ -37,5 +38,9 @@ public class EngageMenuInfo : MonoBehaviour
     {
         GetComponent<UILabel>().text = "Change the equipement\n before the battle start!\n(Once per battle)";
     }
-    
+
+    public void DisplayNothing()
+    {
+        GetComponent<UILabel>().text = String.Empty;
+    }
 }
