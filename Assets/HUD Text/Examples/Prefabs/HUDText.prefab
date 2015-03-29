@@ -45,12 +45,23 @@ MonoBehaviour:
   fontSize: 48
   fontStyle: 0
   applyGradient: 1
-  gradientTop: {r: 1, g: 1, b: 1, a: 1}
-  gradienBottom: {r: .699999988, g: .699999988, b: .699999988, a: 1}
+  gradientTop:
+    r: 1
+    g: 1
+    b: 1
+    a: 1
+  gradienBottom:
+    r: .699999988
+    g: .699999988
+    b: .699999988
+    a: 1
   effect: 1
-  effectColor: {r: 0, g: 0, b: 0, a: 1}
+  effectColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 1
   offsetCurve:
-    serializedVersion: 2
     m_Curve:
     - time: 0
       value: 0
@@ -65,7 +76,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
   alphaCurve:
-    serializedVersion: 2
     m_Curve:
     - time: 1
       value: 1
@@ -80,7 +90,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
   scaleCurve:
-    serializedVersion: 2
     m_Curve:
     - time: 0
       value: 0
@@ -110,4 +119,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
-  m_IsExploded: 1

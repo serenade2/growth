@@ -229,7 +229,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: b76c71a1e3f6c4fdab657f4fbf5466de, type: 2}
       propertyPath: m_Shadows.m_Type
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b76c71a1e3f6c4fdab657f4fbf5466de, type: 2}
       propertyPath: m_IsActive
@@ -511,6 +511,7 @@ MonoBehaviour:
   useController: 1
   stickyTooltip: 1
   tooltipDelay: 1
+  longPressTooltip: 0
   mouseDragThreshold: 4
   mouseClickThreshold: 10
   touchDragThreshold: 40
@@ -878,7 +879,7 @@ Transform:
   m_GameObject: {fileID: 489308312}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -.0292580128, z: -2.62058473}
-  m_LocalScale: {x: .00477326987, y: .00477326987, z: .00477326987}
+  m_LocalScale: {x: .00373831787, y: .00373831787, z: .00373831787}
   m_Children:
   - {fileID: 308315613}
   - {fileID: 1836440149}
@@ -1442,6 +1443,7 @@ MonoBehaviour:
   useController: 1
   stickyTooltip: 1
   tooltipDelay: 1
+  longPressTooltip: 0
   mouseDragThreshold: 4
   mouseClickThreshold: 10
   touchDragThreshold: 40
@@ -1540,6 +1542,7 @@ MonoBehaviour:
   useController: 1
   stickyTooltip: 1
   tooltipDelay: 1
+  longPressTooltip: 0
   mouseDragThreshold: 4
   mouseClickThreshold: 10
   touchDragThreshold: 40
@@ -1623,7 +1626,7 @@ Transform:
   m_GameObject: {fileID: 997200084}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -.0292580128, z: -2.62058473}
-  m_LocalScale: {x: .00477326987, y: .00477326987, z: .00477326987}
+  m_LocalScale: {x: .00373831787, y: .00373831787, z: .00373831787}
   m_Children:
   - {fileID: 946300734}
   - {fileID: 143455346}
@@ -1735,7 +1738,7 @@ Transform:
   m_GameObject: {fileID: 1184920493}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -.0292580128, z: -2.62058473}
-  m_LocalScale: {x: .00477326987, y: .00477326987, z: .00477326987}
+  m_LocalScale: {x: .00373831787, y: .00373831787, z: .00373831787}
   m_Children:
   - {fileID: 860243374}
   - {fileID: 1695991651}
@@ -2070,7 +2073,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_Strength: 1
     m_Bias: .0500000007
@@ -2152,6 +2155,7 @@ MonoBehaviour:
   useController: 1
   stickyTooltip: 1
   tooltipDelay: 1
+  longPressTooltip: 0
   mouseDragThreshold: 4
   mouseClickThreshold: 10
   touchDragThreshold: 40
@@ -2672,7 +2676,7 @@ Transform:
   m_GameObject: {fileID: 1996253632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -.0292580128, z: -2.62058473}
-  m_LocalScale: {x: .00477326987, y: .00477326987, z: .00477326987}
+  m_LocalScale: {x: .00373831787, y: .00373831787, z: .00373831787}
   m_Children:
   - {fileID: 1694935052}
   - {fileID: 1768132301}
