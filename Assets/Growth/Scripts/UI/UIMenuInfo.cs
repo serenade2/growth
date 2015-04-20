@@ -1,7 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-public class EngageMenuInfo : MonoBehaviour 
+/// <summary>
+/// This class display information of each icons that are in the battle menu.
+/// <author>Samuel Abraham</author>
+/// </summary>
+public class UIMenuInfo : MonoBehaviour 
 {
     public void MakeItRed()
     {
@@ -18,7 +22,10 @@ public class EngageMenuInfo : MonoBehaviour
         GetComponent<UIWidget>().color = Color.green;
     }
 
-
+    public void DisplayEngageMenuInfo()
+    {
+        GetComponent<UILabel>().text = "Engage the enemy!";
+    }
     public void DisplayAttackMenuInfo()
     {
         GetComponent<UILabel>().text = "Attack the enemy!";
@@ -26,7 +33,7 @@ public class EngageMenuInfo : MonoBehaviour
 
     public void DisplayEscapeCommandInfo()
     {
-        GetComponent<UILabel>().text = "Run from the battle!";
+        GetComponent<UILabel>().text = "Escape from the battle!";
     }
 
     public void DisplayItemMenuInfo()
@@ -43,4 +50,25 @@ public class EngageMenuInfo : MonoBehaviour
     {
         GetComponent<UILabel>().text = String.Empty;
     }
+
+    public void DisplayMCMenuInfo()
+    {
+        GetComponent<UILabel>().text = "Use/Set Mystic creatures!";
+    }
+
+    public void DisplaySpecialMenuInfo()
+    {
+        GetComponent<UILabel>().text = "Use technical skills!";
+    }
+
+    public void DisplayMMCMenuInfo()
+    {
+        GetComponent<UILabel>().text = "Unleash the potential of the mystic creatures!";
+    }
+
+    public void DisplayDefenseActionInfo()
+    {
+        GetComponent<UILabel>().text = "Defend for this turn.";
+    }
+
 }
