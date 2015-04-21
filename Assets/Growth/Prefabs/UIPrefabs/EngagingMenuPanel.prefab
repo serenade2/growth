@@ -11,7 +11,7 @@ GameObject:
   - 114: {fileID: 11494284}
   m_Layer: 8
   m_Name: EngagingMenuPanel
-  m_TagString: Untagged
+  m_TagString: GrowthUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1208,6 +1208,7 @@ MonoBehaviour:
   useController: 1
   stickyTooltip: 1
   tooltipDelay: 1
+  longPressTooltip: 0
   mouseDragThreshold: 4
   mouseClickThreshold: 10
   touchDragThreshold: 40
@@ -1640,4 +1641,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 194284}
   m_IsPrefabParent: 1
-  m_IsExploded: 1
