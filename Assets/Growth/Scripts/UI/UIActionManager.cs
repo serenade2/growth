@@ -4,13 +4,15 @@ using System.Collections;
 
 public class UIActionManager : MonoBehaviour
 {
-    private GameObject engagingMenuPanelGameObject;
-    private GameObject attackingMenuPanelGameObject;
+    public GameObject engagingMenuPanelGameObject;
+    public GameObject attackingMenuPanelGameObject;
 	// Use this for initialization
-	void Start () 
+	void Start ()
 	{
-        //engagingMenuPanelGameObject = GameObject.Find("EngagingMenuPanel");
+	    engagingMenuPanelGameObject = GameObject.Find("EngagingMenuPanel");
         attackingMenuPanelGameObject = GameObject.Find("AttackingMenuPanel");
+        // show only the principal ui at the start of the battle.
+        CloseAttackingMenuPanel();
 	}
 	
 	// Update is called once per frame
@@ -19,29 +21,52 @@ public class UIActionManager : MonoBehaviour
        
 	}
 
-	public void OpenEngagingMenuPanel()
+    public void DisplayAttackMenu()
+    {
+        CloseEngagingMenuPanel();
+        OpenAttackingMenuPanel();
+    }
+
+    public void DisplayEngagingMenu()
+    {
+        CloseAttackingMenuPanel();
+        OpenEngagingMenuPanel();
+    }
+
+	private void OpenEngagingMenuPanel()
 	{
 		//GetComponent<UIPanel>().gameObject.transform
-		
-		NGUITools.SetActive(engagingMenuPanelGameObject,true);
+	    if (engagingMenuPanelGameObject != null)
+	    {
+	        NGUITools.SetActive(engagingMenuPanelGameObject, true);
+	    }    
 	}
 
-	public void CloseEngagingMenuPanel()
+	private void CloseEngagingMenuPanel()
 	{
-		NGUITools.SetActive(engagingMenuPanelGameObject, false);
+	    if (engagingMenuPanelGameObject != null)
+	    {
+            //NGUITools.SetActive(engagingMenuPanelGameObject, false);
+            this.engagingMenuPanelGameObject.SetActive(false);
+	    }
 	}
 
-	public void OpenAttackingMenuPanel()
+	private void OpenAttackingMenuPanel()
 	{
-        attackingMenuPanelGameObject = GameObject.Find("AttackingMenuPanel");
+        //attackingMenuPanelGameObject = GameObject.Find("AttackingMenuPanel");
 	    //GameObject.Find("AttackingMenuPanel", bool active_only = true);
-        attackingMenuPanelGameObject = FindGameObjectHelper.GameObjectHardFind("AttackingMenuPanel");
-		NGUITools.SetActive(attackingMenuPanelGameObject, true);
+	    if (attackingMenuPanelGameObject != null)
+	    {
+            NGUITools.SetActive(attackingMenuPanelGameObject, true);
+	    }
 	}
 
-	 public void CloseAttackingMenuPanel()
+	private void CloseAttackingMenuPanel()
 	{
-		NGUITools.SetActive(attackingMenuPanelGameObject, false);
+	     if (attackingMenuPanelGameObject != null)
+	     {
+             NGUITools.SetActive(attackingMenuPanelGameObject, false);
+	     }
 	}
 
 
