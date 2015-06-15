@@ -545,6 +545,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+  m_StereoMirrorMode: 0
 --- !u!54 &5417650
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -670,6 +671,7 @@ MonoBehaviour:
   onLeft: {fileID: 118824}
   onRight: {fileID: 0}
   onClick: {fileID: 0}
+  onTab: {fileID: 0}
   startsSelected: 1
 --- !u!114 &11405880
 MonoBehaviour:
@@ -808,6 +810,7 @@ MonoBehaviour:
   onLeft: {fileID: 0}
   onRight: {fileID: 0}
   onClick: {fileID: 0}
+  onTab: {fileID: 0}
   startsSelected: 0
 --- !u!114 &11422294
 MonoBehaviour:
@@ -1017,6 +1020,7 @@ MonoBehaviour:
   onLeft: {fileID: 0}
   onRight: {fileID: 157420}
   onClick: {fileID: 0}
+  onTab: {fileID: 0}
   startsSelected: 0
 --- !u!114 &11445990
 MonoBehaviour:
@@ -1079,6 +1083,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95de0e0c191fdfe49a800413d1ff4d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  engagingMenuPanelGameObject: {fileID: 0}
+  attackingMenuPanelGameObject: {fileID: 0}
 --- !u!114 &11449560
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1296,6 +1302,7 @@ MonoBehaviour:
   onLeft: {fileID: 0}
   onRight: {fileID: 0}
   onClick: {fileID: 0}
+  onTab: {fileID: 0}
   startsSelected: 0
 --- !u!114 &11464706
 MonoBehaviour:
@@ -1523,9 +1530,11 @@ MonoBehaviour:
   touchDragThreshold: 40
   touchClickThreshold: 40
   rangeDistance: -1
-  scrollAxisName: Mouse ScrollWheel
-  verticalAxisName: Vertical
   horizontalAxisName: Horizontal
+  verticalAxisName: Vertical
+  horizontalPanAxisName: 
+  verticalPanAxisName: 
+  scrollAxisName: Mouse ScrollWheel
   commandClick: 1
   submitKey0: 13
   submitKey1: 330

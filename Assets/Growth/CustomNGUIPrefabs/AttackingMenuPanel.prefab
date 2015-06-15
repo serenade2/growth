@@ -669,6 +669,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+  m_StereoMirrorMode: 0
 --- !u!54 &5475858
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -767,6 +768,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95de0e0c191fdfe49a800413d1ff4d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  engagingMenuPanelGameObject: {fileID: 0}
+  attackingMenuPanelGameObject: {fileID: 0}
 --- !u!114 &11409328
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1059,6 +1062,7 @@ MonoBehaviour:
   onLeft: {fileID: 159400}
   onRight: {fileID: 140576}
   onClick: {fileID: 0}
+  onTab: {fileID: 0}
   startsSelected: 0
 --- !u!114 &11426856
 MonoBehaviour:
@@ -1147,6 +1151,7 @@ MonoBehaviour:
   onLeft: {fileID: 140576}
   onRight: {fileID: 180646}
   onClick: {fileID: 0}
+  onTab: {fileID: 0}
   startsSelected: 1
 --- !u!114 &11437338
 MonoBehaviour:
@@ -1531,9 +1536,11 @@ MonoBehaviour:
   touchDragThreshold: 40
   touchClickThreshold: 40
   rangeDistance: -1
-  scrollAxisName: Mouse ScrollWheel
-  verticalAxisName: Vertical
   horizontalAxisName: Horizontal
+  verticalAxisName: Vertical
+  horizontalPanAxisName: 
+  verticalPanAxisName: 
+  scrollAxisName: Mouse ScrollWheel
   commandClick: 1
   submitKey0: 13
   submitKey1: 330
@@ -1567,6 +1574,7 @@ MonoBehaviour:
   onLeft: {fileID: 180646}
   onRight: {fileID: 159400}
   onClick: {fileID: 0}
+  onTab: {fileID: 0}
   startsSelected: 0
 --- !u!114 &11469792
 MonoBehaviour:
@@ -1585,6 +1593,7 @@ MonoBehaviour:
   onLeft: {fileID: 150394}
   onRight: {fileID: 174588}
   onClick: {fileID: 0}
+  onTab: {fileID: 0}
   startsSelected: 0
 --- !u!114 &11471104
 MonoBehaviour:
@@ -1648,6 +1657,7 @@ MonoBehaviour:
   onLeft: {fileID: 174588}
   onRight: {fileID: 171614}
   onClick: {fileID: 0}
+  onTab: {fileID: 0}
   startsSelected: 0
 --- !u!114 &11471236
 MonoBehaviour:
@@ -1761,6 +1771,7 @@ MonoBehaviour:
   onLeft: {fileID: 171614}
   onRight: {fileID: 150394}
   onClick: {fileID: 0}
+  onTab: {fileID: 0}
   startsSelected: 0
 --- !u!114 &11475270
 MonoBehaviour:
